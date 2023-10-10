@@ -21,10 +21,11 @@
         "test\\.ya?ml"
       ],
       "matchStrings": [
-        ": (?<version>.*?) # renovate: depName=(?<depName>.*?)",
+        ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?",
         "version: (?<currentValue>.*?) # renovate: depName=(?<depName>.*?) registryUrl=(?<registryUrl>.*?)( datasource=(?<datasource>.*?))?( depType=(?<depType>.*?))?\\n"
       ],
-      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}"
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-tags{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ]
 }
