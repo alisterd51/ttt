@@ -8,7 +8,7 @@
     # renovate: datasource=github-tags depName=stedolan/jq
     JQ_VERSION: jq-1.6
 
-version: 37.10.0 # renovate: depName=renovate registryUrl=https://docs.renovatebot.com/helm-charts datasource=helm
+version: 37.11.1 # renovate: depName=renovate registryUrl=https://docs.renovatebot.com/helm-charts datasource=helm
 
 # renovate: datasource=github-tags depName=nodejs/node versioning=node
 ENV NODE_VERSION=10.19.0
