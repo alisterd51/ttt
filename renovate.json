@@ -10,5 +10,15 @@
     "default:semanticCommits",
     ":disableRateLimiting",
     ":rebaseStalePrs"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "matchStringsStrategy": "any",
+      "matchStrings": [
+        "(?<currentValue>.*?) # renovate: depName=(?<depName>.*?)"
+      ],
+      "datasourceTemplate": "github-releases"
+    }
   ]
 }
