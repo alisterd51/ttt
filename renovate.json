@@ -15,7 +15,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "(^|/)test\\.ya?ml$"
+        "test\\.ya?ml"
       ],
       "matchStringsStrategy": "any",
       "matchStrings": [
