@@ -21,7 +21,7 @@
         "test\\.ya?ml"
       ],
       "matchStrings": [
-        "(?<currentValue>.*?) # renovate: depName=(?<depName>.*?)"
+        ": (?<currentValue>.*?) # renovate: depName=(?<depName>.*?)"
       ],
       "datasourceTemplate": "github-releases"
     }
