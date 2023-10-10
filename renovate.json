@@ -11,13 +11,15 @@
     ":disableRateLimiting",
     ":rebaseStalePrs"
   ],
+  "enabledManagers": [
+    "regex"
+  ],
   "customManagers": [
     {
       "customType": "regex",
       "fileMatch": [
         "test\\.ya?ml"
       ],
-      "matchStringsStrategy": "any",
       "matchStrings": [
         "(?<currentValue>.*?) # renovate: depName=(?<depName>.*?)"
       ],
