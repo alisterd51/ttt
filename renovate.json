@@ -23,7 +23,7 @@
       "matchStrings": [
         ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?",
         "version: (?<currentValue>.*?) # renovate: depName=(?<depName>.*?) registryUrl=(?<registryUrl>.*?)( datasource=(?<datasource>.*?))?( depType=(?<depType>.*?))?\\n",
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=(?<currentValue>.*)\\s"
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s .*?_VERSION: (?<currentValue>.*)\\s"
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-tags{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
