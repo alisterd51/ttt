@@ -25,7 +25,7 @@
         ": (?<currentValue>.*?) # renovate: depName=(?<depName>.*?)",
         "version: (?<currentValue>.*?) # renovate: depName=(?<depName>.*?) registryUrl=(?<registryUrl>.*?)( datasource=(?<datasource>.*?))?( depType=(?<depType>.*?))?\\n"
       ],
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}"
     }
   ]
 }
