@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabled": true,
+  "baseBranches": [
+    "master"
+  ],
+  "commitMessageSuffix": "({{updateType}})",
+  "extends": [
+    "config:recommended",
+    "default:semanticCommits",
+    ":disableRateLimiting",
+    ":rebaseStalePrs"
+  ]
+}
