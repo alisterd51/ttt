@@ -30,7 +30,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["stedolan/jq"],
-      "versioning": "regex:^(?<compatibility>.*)-v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$"
+      "versioning": "regex:^jq-?(?<major>\\d+)\\.(?<minor>\\d+)?$"
     }
   ]
 }
