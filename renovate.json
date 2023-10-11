@@ -38,6 +38,11 @@
       "matchManagers": ["regex"],
       "matchPackageNames": ["gcr.io/google_containers/pause-amd64"],
       "versioning": "regex:^?(?<major>\\d+)\\.(?<minor>\\d+)?$"
+    },
+    {
+      "matchManagers": ["regex"],
+      "matchPackageNames": ["quay.io/galexrt/node-exporter-textfiles"],
+      "versioning": "regex:^v-?(?<major>\\d+)-(?<minor>\\d+)-(?<patch>\\d+)?$"
     }
   ]
 }
