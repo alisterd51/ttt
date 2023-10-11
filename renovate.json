@@ -18,7 +18,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "test\\.ya?ml"
+        "\\.ya?ml"
       ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s .*?_VERSION: (?<currentValue>.*)\\s"
