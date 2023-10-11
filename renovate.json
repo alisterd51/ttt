@@ -33,6 +33,11 @@
       "matchManagers": ["regex"],
       "matchPackageNames": ["stedolan/jq"],
       "versioning": "regex:^jq-?(?<major>\\d+)\\.(?<minor>\\d+)?$"
+    },
+    {
+      "matchManagers": ["regex"],
+      "matchPackageNames": ["gcr.io/google_containers/pause-amd64"],
+      "versioning": "regex:^?(?<major>\\d+)\\.(?<minor>\\d+)?$"
     }
   ]
 }
