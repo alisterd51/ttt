@@ -29,6 +29,7 @@
   ],
   "packageRules": [
     {
+      "matchManagers": ["regex"],
       "matchPackageNames": ["stedolan/jq"],
       "versioning": "regex:^jq-?(?<major>\\d+)\\.(?<minor>\\d+)?$"
     }
