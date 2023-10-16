@@ -11,6 +11,9 @@
     ":disableRateLimiting",
     ":rebaseStalePrs"
   ],
+  "includePaths": [
+    "charts/**"
+  ],
   "enabledManagers": [
     "regex",
     "helmv3"
