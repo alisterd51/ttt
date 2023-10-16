@@ -14,5 +14,6 @@
   "enabledManagers": [
     "regex",
     "helmv3"
-  ]
+  ],
+  "bumpVersion": "minor"
 }
