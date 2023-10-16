@@ -15,8 +15,7 @@
     "charts/**"
   ],
   "enabledManagers": [
-    "regex",
-    "helmv3"
+    "regex"
   ],
   "postUpdateOptions": [
     "helmUpdateSubChartArchives"
