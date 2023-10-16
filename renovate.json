@@ -15,7 +15,6 @@
     "charts/**"
   ],
   "enabledManagers": [
-    "regex",
     "helmv3"
   ],
   "postUpdateOptions": [
