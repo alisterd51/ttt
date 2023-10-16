@@ -18,5 +18,8 @@
     "regex",
     "helmv3"
   ],
+  "postUpdateOptions": [
+    "helmUpdateSubChartArchives"
+  ],
   "bumpVersion": "minor"
 }
