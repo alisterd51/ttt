@@ -18,10 +18,25 @@
     {
       "customType": "regex",
       "fileMatch": [
+        "(^|/)helmfile\\.ya?ml\\.gotmpl$"
+      ],
+      "matchStringsStrategy": "any",
+      "matchStrings": [
+        "version: (?<currentValue>.*?) # renovate: depName=(?<depName>.*?) registryUrl=(?<registryUrl>.*?)( datasource=(?<datasource>.*?))?( depType=(?<depType>.*?))?\\n"
+      ],
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}helm{{/if}}",
+      "depTypeTemplate": "{{#if depType}}{{{depType}}}{{else}}helm_release{{/if}}",
+      "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "(^|/)helmfile\\.ya?ml\\.gotmpl$",
         "\\.ya?ml$"
       ],
       "matchStrings": [
-        ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n"
+        ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n",
+        "image: \"?(?<depName>.*?):(?<currentValue>.*\\d+?)\"? # renovate: datasource=(?<datasource>.*?)( versioning=(?<versioning>.*?))?\\n"
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-tags{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
