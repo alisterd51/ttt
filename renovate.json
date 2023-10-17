@@ -36,7 +36,7 @@
     {
       "matchManagers": ["regex"],
       "matchPackageNames": ["carvel-dev/ytt", "mikefarah/yq"],
-      "extractVersionTemplate": "(?<version>.+)"
+      "extractVersion": "^(?<version>.*)$"
     },
     {
       "matchManagers": ["regex"],
