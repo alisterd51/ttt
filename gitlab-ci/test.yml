@@ -7,7 +7,7 @@
 
       image: "ubuntu:16.04" # renovate: datasource=docker versioning=docker
       image: bitnami/kubectl:1.26 # renovate: datasource=docker versioning=docker
-      image: quay.io/galexrt/node-exporter-textfiles:v20220901-124456-405 # renovate: datasource=docker versioning=docker
+      image: quay.io/galexrt/node-exporter-textfiles:v20231012-124028-460 # renovate: datasource=docker versioning=docker
       image: machine424/preemption-events:0.1.0 # renovate: datasource=docker versioning=docker
       image: docker.io/library/alpine:3.18.3 # renovate: datasource=docker versioning=docker
       image: gcr.io/google_containers/pause-amd64:3.1 # renovate: datasource=docker versioning=docker
