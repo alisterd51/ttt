@@ -35,8 +35,8 @@
     },
     {
       "matchManagers": ["regex"],
-      "matchPackageNames": ["carvel-dev/ytt"],
-      "versioning": "semver"
+      "matchPackageNames": ["carvel-dev/ytt", "mikefarah/yq"],
+      "versioning": "semver-coerced"
     },
     {
       "matchManagers": ["regex"],
