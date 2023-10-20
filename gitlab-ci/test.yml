@@ -1,7 +1,7 @@
 .generate-ci:
   image: alpine
   variables:
-    YTT_VERSION: 0.45.3 # renovate: datasource=github-tags depName=carvel-dev/ytt
+    YTT_VERSION: 0.46.0 # renovate: datasource=github-tags depName=carvel-dev/ytt
     YQ_VERSION: 4.34.2 # renovate: datasource=github-tags depName=mikefarah/yq
     JQ_VERSION: jq-1.6 # renovate: datasource=github-tags depName=stedolan/jq
 
