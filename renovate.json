@@ -12,7 +12,8 @@
     ":rebaseStalePrs"
   ],
   "enabledManagers": [
-    "regex"
+    "regex",
+    "pip_requirements"
   ],
   "customManagers": [
     {
@@ -64,16 +65,16 @@
       "versioning": "regex:^v-?(?<major>\\d+)-(?<minor>\\d+)-(?<patch>\\d+)?$"
     },
     {
-      "groupName": "regex patch dependencies",
-      "groupSlug": "regex-patch",
-      "matchCategories": ["regex"],
+      "groupName": "python patch dependencies",
+      "groupSlug": "python-patch",
+      "matchCategories": ["python"],
       "matchUpdateTypes": ["patch"],
       "enabled": true
     },
     {
-      "groupName": "regex minor dependencies",
-      "groupSlug": "regex-minor",
-      "matchCategories": ["regex"],
+      "groupName": "python minor dependencies",
+      "groupSlug": "python-minor",
+      "matchCategories": ["python"],
       "matchUpdateTypes": ["minor"],
       "matchCurrentVersion": "!/^0/",
       "enabled": true
