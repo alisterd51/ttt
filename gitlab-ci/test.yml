@@ -5,7 +5,7 @@
     YQ_VERSION: 4.34.2 # renovate: datasource=github-tags depName=mikefarah/yq
     JQ_VERSION: jq-1.6 # renovate: datasource=github-tags depName=stedolan/jq
 
-      image: "ubuntu:16.04" # renovate: datasource=docker versioning=docker
+      image: "ubuntu:23.10" # renovate: datasource=docker versioning=docker
       image: bitnami/kubectl:1.26 # renovate: datasource=docker versioning=docker
       image: quay.io/galexrt/node-exporter-textfiles:v20220901-124456-405 # renovate: datasource=docker versioning=docker
       image: machine424/preemption-events:0.1.0 # renovate: datasource=docker versioning=docker
