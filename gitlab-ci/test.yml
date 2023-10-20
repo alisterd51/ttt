@@ -3,7 +3,7 @@
   variables:
     YTT_VERSION: 0.45.3 # renovate: datasource=github-tags depName=carvel-dev/ytt
     YQ_VERSION: 4.34.2 # renovate: datasource=github-tags depName=mikefarah/yq
-    JQ_VERSION: jq-1.6 # renovate: datasource=github-tags depName=stedolan/jq
+    JQ_VERSION: jq-1.7 # renovate: datasource=github-tags depName=stedolan/jq
 
       image: "ubuntu:16.04" # renovate: datasource=docker versioning=docker
       image: bitnami/kubectl:1.26 # renovate: datasource=docker versioning=docker
