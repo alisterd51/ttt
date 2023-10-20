@@ -11,4 +11,4 @@
       image: machine424/preemption-events:0.1.0 # renovate: datasource=docker versioning=docker
       image: docker.io/library/alpine:3.18.3 # renovate: datasource=docker versioning=docker
       image: gcr.io/google_containers/pause-amd64:3.1 # renovate: datasource=docker versioning=docker
-      image: velero/velero-plugin-for-aws:v1.6.1 # renovate: datasource=docker versioning=docker
+      image: velero/velero-plugin-for-aws:v1.8.0 # renovate: datasource=docker versioning=docker
