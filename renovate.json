@@ -64,15 +64,25 @@
       "versioning": "regex:^v-?(?<major>\\d+)-(?<minor>\\d+)-(?<patch>\\d+)?$"
     },
     {
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
+      "groupName": "all patch dependencies",
+      "groupSlug": "all-patch",
       "matchPackagePatterns": [
         "*"
       ],
       "matchUpdateTypes": [
-        "minor",
         "patch"
       ]
+    },
+    {
+      "groupName": "all minor dependencies",
+      "groupSlug": "all-minor",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "matchCurrentVersion": "!/^0/"
     }
   ]
 }
