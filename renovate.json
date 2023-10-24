@@ -26,7 +26,7 @@
         ": (?<depName>.*?):(?<currentValue>.*?) # renovate(: datasource=(?<datasource>.*?))?\\n",
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}docker{{/if}}",
-      "versioningTemplate": "semver"
+      "versioningTemplate": "docker"
     }
   ],
   "packageRules": [
