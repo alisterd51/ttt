@@ -1,2 +1,6 @@
 include:
   - local: gitlab-ci/*.yml
+
+  stage: test
+  services:
+    - name: docker:20-dind # renovate
