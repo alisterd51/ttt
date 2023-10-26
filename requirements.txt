@@ -16,4 +16,4 @@ certifi==2023.7.21
     # via
     #   kubernetes
     #   requests
-cffi==1.15.1
+cffi==1.16.0
