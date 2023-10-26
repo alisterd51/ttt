@@ -7,7 +7,8 @@
     "config:best-practices",
     "default:semanticCommits",
     ":disableRateLimiting",
-    ":rebaseStalePrs"
+    ":rebaseStalePrs",
+    ":preserveSemverRanges"
   ],
   "enabledManagers": [
     "regex",
