@@ -6,7 +6,7 @@
   ],
   "commitMessageSuffix": "({{updateType}})",
   "extends": [
-    "config:recommended",
+    "config:best-practices",
     "default:semanticCommits",
     ":disableRateLimiting",
     ":rebaseStalePrs"
