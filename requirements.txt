@@ -4,7 +4,7 @@
 #
 #    pip-compile --no-emit-index-url pyproject.toml
 #
-anyio==3.7.0
+anyio==4.0.0
     # via starlette
 attrs==23.1.0
     # via
