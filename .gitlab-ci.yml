@@ -3,4 +3,4 @@ include:
 
   stage: test
   services:
-    - name: docker:20-dind # renovate
+    - name: docker:24-dind # renovate
