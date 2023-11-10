@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "passport-jwt": "^3.0.0"
+    "passport-jwt": "3.0.1"
   }
 }
