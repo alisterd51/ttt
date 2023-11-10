@@ -1,6 +1,0 @@
-include:
-  - local: gitlab-ci/*.yml
-
-  stage: test
-  services:
-    - name: docker:24-dind # renovate

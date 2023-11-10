@@ -4,66 +4,12 @@
   "baseBranches": ["master"],
   "commitMessageSuffix": "({{updateType}})",
   "extends": [
-    "config:best-practices",
+    "config:recommended",
     "default:semanticCommits",
     ":disableRateLimiting",
-    ":rebaseStalePrs",
-    ":preserveSemverRanges"
+    ":rebaseStalePrs"
+
   ],
-  "enabledManagers": [
-    "regex",
-    "pip_requirements"
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "(^|/)helmfile\\.ya?ml\\.gotmpl$",
-        "\\.ya?ml$"
-      ],
-      "matchStrings": [
-        ": (?<depName>.*?):(?<currentValue>.*?) # renovate(: datasource=(?<datasource>.*?))?\\n",
-      ],
-      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}docker{{/if}}",
-      "versioningTemplate": "docker"
-    }
-  ],
-  "packageRules": [
-    {
-      "matchManagers": ["regex"],
-      "matchPackageNames": ["stedolan/jq"],
-      "versioning": "regex:^jq-?(?<major>\\d+)\\.(?<minor>\\d+)?$"
-    },
-    {
-      "matchManagers": ["regex"],
-      "matchPackageNames": ["carvel-dev/ytt", "mikefarah/yq"],
-      "versioning": "node"
-    },
-    {
-      "matchManagers": ["regex"],
-      "matchPackageNames": ["gcr.io/google_containers/pause-amd64"],
-      "versioning": "regex:^?(?<major>\\d+)\\.(?<minor>\\d+)?$"
-    },
-    {
-      "matchManagers": ["regex"],
-      "matchPackageNames": ["quay.io/galexrt/node-exporter-textfiles"],
-      "versioning": "regex:^v-?(?<major>\\d+)-(?<minor>\\d+)-(?<patch>\\d+)?$"
-    },
-    {
-      "groupName": "python patch dependencies",
-      "groupSlug": "python-patch",
-      "matchCategories": ["python"],
-      "matchUpdateTypes": ["patch"],
-      "enabled": true
-    },
-    {
-      "groupName": "python minor dependencies",
-      "groupSlug": "python-minor",
-      "matchCategories": ["python"],
-      "matchUpdateTypes": ["minor"],
-      "matchCurrentVersion": "!/^0/",
-      "enabled": true
-    }
-  ]
+  "enabledManagers": ["dockerfile", "npm"]
 }
 
