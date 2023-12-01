@@ -9,6 +9,7 @@
     ":disableRateLimiting",
     ":rebaseStalePrs"
   ],
+  "separateMinorPatch": true,
   "enabledManagers": [
     "regex"
   ],
@@ -20,6 +21,7 @@
         "\\.ya?ml$"
       ],
       "matchStrings": [
+        "image: (?<depName>.*?):(?<currentValue>.*?) # renovate(: datasource=(?<datasource>.*?))?\\n",
         ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n"
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}docker{{/if}}",
