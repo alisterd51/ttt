@@ -8,13 +8,17 @@
     "default:semanticCommits",
     ":disableRateLimiting",
     ":rebaseStalePrs"
-
+  ],
+  "enabledManagers": [
+    "regex"
   ],
   "customManagers": [
     {
       "description": "Update docker image version",
       "customType": "regex",
-      "fileMatch": ["\\.*y[a]?ml$"],
+      "fileMatch": [
+        "\\.ya?ml$"
+      ],
       "matchStrings": [
         ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n"
       ],
