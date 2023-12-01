@@ -10,7 +10,6 @@
     ":rebaseStalePrs"
 
   ],
-  "enabledManagers": ["custom.regex"],
   "customManagers": [
     {
       "description": "Update docker image version",
