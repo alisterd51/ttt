@@ -10,6 +10,18 @@
     ":rebaseStalePrs"
 
   ],
-  "enabledManagers": ["dockerfile", "npm"]
+  "enabledManagers": ["custom.regex"],
+  "customManagers": [
+    {
+      "description": "Update docker image version",
+      "customType": "regex",
+      "fileMatch": [".*y[a]?ml$"],
+      "matchStrings": [
+        "image: (?<depName>.*?):(?<currentValue>.*?) # renovate(: datasource=(?<datasource>.*?))?\\n",
+        ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n"
+      ],
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}docker{{/if}}",
+      "versioningTemplate": "semver"
+    }
+  ]
 }
-
