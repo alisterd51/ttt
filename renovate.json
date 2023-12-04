@@ -15,6 +15,7 @@
   ],
   "packageRules": [
     {
+      "matchManagers": ["*"],
       "groupName": "{{manager}}"
     }
   ],
