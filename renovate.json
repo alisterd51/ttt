@@ -15,7 +15,7 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["*"],
+      "matchManagers": ["regex"],
       "groupName": "{{manager}}"
     }
   ],
