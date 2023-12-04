@@ -13,6 +13,11 @@
   "enabledManagers": [
     "regex"
   ],
+  "packageRules": [
+    {
+      "groupName": "{{manager}}"
+    }
+  ],
   "customManagers": [
     {
       "description": "Update docker image version",
