@@ -2,7 +2,7 @@
   image: alpine:3.18 # renovate
   image: ghcr.io/hadolint/hadolint:2.12.0-alpine # renovate
   image: moby/buildkit:v0.12.4-rootless # renovate
-  image: docker:23 # renovate
+  image: docker:24 # renovate
   image: alpine/git:2.40.1 # renovate
   image: alpine/git:2.40.1 # renovate
   image: alpine:3.18 # renovate
