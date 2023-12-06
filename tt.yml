@@ -7,7 +7,7 @@
   image: alpine/git:2.40.1 # renovate
   image: alpine:3.18 # renovate
   image: ghcr.io/helmfile/helmfile:v0.158.1 # renovate
-  image: bitnami/kubectl:1.26.5 # renovate
+  image: bitnami/kubectl:1.28.4 # renovate
   image: python:3.10 # renovate
   image: ghcr.io/renovatebot/renovate:37-slim # renovate
   image: registry.gitlab.com/security-products/container-scanning:6 # renovate
