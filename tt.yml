@@ -1,9 +1,12 @@
-  PIP_TOOLS_VERSION: "7.3.0" # renovate: datasource=pypi depName=pip-tools
-  HELMFILE_VERSION: v0.155.1 # renovate: datasource=github-tags depName=helmfile/helmfile
-  KUBERNETES_VERSION: 1.21.1 # renovate: datasource=docker depName=alpine/k8s
-  HELM_VERSION: v3.12.2 # renovate: datasource=github-tags depName=helm/helm
-  BANDIT_VERSION: 1.7.5 # renovate: datasource=github-tags depName=PyCQA/bandit
-  CI_SERVICE_DRUID_VERSION: 24.0.2 # renovate: datasource=github-tags depName=wiremind/micro-druid
-  KUBECONFORM_VERSION: v0.6.1 # renovate: datasource=github-tags depName=yannh/kubeconform
-  KIND_VERSION: v0.12.0 # renovate: datasource=github-tags depName=kubernetes-sigs/kind
-  CALICO_VERSION: v3.24.0 # renovate: datasource=github-tags depName=projectcalico/calico
+  image: mikefarah/yq:4 # renovate
+  image: alpine:3.18 # renovate
+  image: ghcr.io/hadolint/hadolint:2.12.0-alpine # renovate
+  image: moby/buildkit:v0.12.4-rootless # renovate
+  image: docker:23 # renovate
+  image: alpine/git:2.40.1 # renovate
+  image: alpine/git:2.40.1 # renovate
+  image: alpine:3.18 # renovate
+  image: ghcr.io/helmfile/helmfile:v0.158.1 # renovate
+  image: bitnami/kubectl:1.26.5 # renovate
+  image: python:3.10 # renovate
+  image: ghcr.io/renovatebot/renovate:37-slim # renovate
