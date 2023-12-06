@@ -12,12 +12,6 @@
   "enabledManagers": [
     "regex"
   ],
-  "packageRules": [
-    {
-      "matchManagers": ["regex"],
-      "groupName": "{{manager}}"
-    }
-  ],
   "customManagers": [
     {
       "description": "Update docker image version",
@@ -30,7 +24,7 @@
         ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n"
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}docker{{/if}}",
-      "versioningTemplate": "semver"
+      "versioningTemplate": "docker"
     }
   ]
 }
