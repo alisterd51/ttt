@@ -10,3 +10,4 @@
   image: bitnami/kubectl:1.26.5 # renovate
   image: python:3.10 # renovate
   image: ghcr.io/renovatebot/renovate:37-slim # renovate
+  image: registry.gitlab.com/security-products/container-scanning:6

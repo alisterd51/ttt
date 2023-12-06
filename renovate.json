@@ -14,16 +14,25 @@
   ],
   "customManagers": [
     {
-      "description": "Update docker image version",
       "customType": "regex",
       "fileMatch": [
         "\\.ya?ml$"
       ],
       "matchStrings": [
-        "image: (?<depName>.*?):(?<currentValue>.*?) # renovate(: datasource=(?<datasource>.*?))?\\n",
         ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n"
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}docker{{/if}}",
+      "versioningTemplate": "{{#if datasource}}{{{datasource}}}{{else}}semver{{/if}}"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "\\.ya?ml$"
+      ],
+      "matchStrings": [
+        "image: (?<depName>.*?):(?<currentValue>.*?) # renovate\\n"
+      ],
+      "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
     }
   ]
