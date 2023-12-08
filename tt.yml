@@ -1,11 +1,11 @@
   image: mikefarah/yq:4 # renovate
-  image: alpine:3.18 # renovate
+  image: alpine:3.19 # renovate
   image: ghcr.io/hadolint/hadolint:2.12.0-alpine # renovate
   image: moby/buildkit:v0.12.4-rootless # renovate
   image: docker:23 # renovate
   image: alpine/git:2.40.1 # renovate
   image: alpine/git:2.40.1 # renovate
-  image: alpine:3.18 # renovate
+  image: alpine:3.19 # renovate
   image: ghcr.io/helmfile/helmfile:v0.158.1 # renovate
   image: bitnami/kubectl:1.26.5 # renovate
   image: python:3.10 # renovate
