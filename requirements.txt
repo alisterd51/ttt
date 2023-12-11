@@ -232,7 +232,7 @@ wrapt==1.15.0
     #   opentelemetry-instrumentation
 wsproto==1.2.0
     # via hypercorn
-xhtml2pdf==0.2.11
+xhtml2pdf==0.2.13
     # via blabla (pyproject.toml)
 zipp==3.17.0
     # via importlib-metadata
