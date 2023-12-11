@@ -226,7 +226,7 @@ webencodings==0.5.1
     #   cssselect2
     #   html5lib
     #   tinycss2
-wrapt==1.15.0
+wrapt==1.16.0
     # via
     #   deprecated
     #   opentelemetry-instrumentation
