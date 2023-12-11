@@ -169,7 +169,7 @@ qrcode==7.4.2
     # via
     #   blabla (pyproject.toml)
     #   pyhanko
-remoulade[pydantic]==3.0.2
+remoulade[pydantic]==3.1.0
     # via
     #   blabla (pyproject.toml)
     #   remoulade
