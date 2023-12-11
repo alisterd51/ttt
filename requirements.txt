@@ -47,7 +47,7 @@ bcrypt==4.0.1
     # via paramiko
 bitstruct==8.17.0
     # via asn1tools
-boto3==1.28.67
+boto3==1.33.11
     # via wiremind-python
 botocore==1.31.67
     # via
