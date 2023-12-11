@@ -118,7 +118,7 @@ pillow==10.1.0
     #   xhtml2pdf
 priority==2.0.0
     # via hypercorn
-prometheus-client==0.17.1
+prometheus-client==0.19.0
     # via remoulade
 prompt-toolkit==3.0.39
     # via ptpython
