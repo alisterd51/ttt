@@ -366,7 +366,7 @@ rsa==4.9
     # via google-auth
 s3transfer==0.7.0
     # via boto3
-sendgrid==6.9.7
+sendgrid==6.11.0
     # via wiremind-python
 simplejson==3.19.2
     # via
