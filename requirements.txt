@@ -203,7 +203,7 @@ tinycss2==1.2.1
     # via
     #   cssselect2
     #   svglib
-typing-extensions==4.8.0
+typing-extensions==4.9.0
     # via
     #   fastapi
     #   pydantic
