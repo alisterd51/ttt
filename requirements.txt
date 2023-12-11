@@ -98,7 +98,7 @@ deprecated==1.2.14
     # via opentelemetry-api
 dnspython==2.4.2
     # via email-validator
-elasticsearch[async]==7.17.9
+elasticsearch[async]==8.11.1
     # via
     #   elasticsearch
     #   elasticsearch-dsl
