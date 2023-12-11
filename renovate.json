@@ -3,37 +3,9 @@
   "enabled": true,
   "baseBranches": ["master"],
   "extends": [
-    "config:recommended",
+    "config:best-practices",
     "default:semanticCommits",
     ":disableRateLimiting",
     ":rebaseStalePrs"
-  ],
-  "separateMinorPatch": true,
-  "enabledManagers": [
-    "regex"
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "\\.ya?ml$"
-      ],
-      "matchStrings": [
-        ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n"
-      ],
-      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}docker{{/if}}",
-      "versioningTemplate": "{{#if datasource}}{{{datasource}}}{{else}}semver{{/if}}"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "\\.ya?ml$"
-      ],
-      "matchStrings": [
-        "image: (?<depName>.*?):(?<currentValue>.*?) # renovate\\n"
-      ],
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "docker"
-    }
   ]
 }
