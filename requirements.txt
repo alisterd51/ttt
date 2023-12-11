@@ -219,7 +219,7 @@ uritools==4.0.2
     # via pyhanko-certvalidator
 urllib3==1.26.18
     # via requests
-wcwidth==0.2.8
+wcwidth==0.2.12
     # via prompt-toolkit
 webencodings==0.5.1
     # via
