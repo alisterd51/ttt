@@ -399,7 +399,7 @@ starlette==0.27.0
     # via
     #   fastapi
     #   strawberry-graphql
-strawberry-graphql[asgi]==0.209.8
+strawberry-graphql[asgi]==0.216.0
     # via
     #   ceramic
     #   strawberry-graphql
