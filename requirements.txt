@@ -72,7 +72,7 @@ charset-normalizer==3.3.0
     # via
     #   aiohttp
     #   requests
-chartreuse==4.3.3
+chartreuse==4.3.4
     # via blabla (pyproject.toml)
 click==8.1.7
     # via
