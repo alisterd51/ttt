@@ -52,7 +52,7 @@ email-validator==2.0.0.post2
     # via pydantic
 fastapi==0.104.0
     # via blabla (pyproject.toml)
-greenlet==3.0.0
+greenlet==3.0.2
     # via sqlalchemy
 h11==0.14.0
     # via
