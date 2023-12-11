@@ -3,7 +3,7 @@ name = "blabla"
 version = "0.0.1"
 dependencies = [
     "asn1tools",
-    "ceramic==17.1.0",
+    "ceramic==2020.11.12",
     "chartreuse>=4.3.3",
     "click",
     "cryptography",
