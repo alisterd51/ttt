@@ -254,7 +254,7 @@ prometheus-client==0.17.1
     # via remoulade
 prompt-toolkit==3.0.39
     # via ptpython
-protobuf==4.24.4
+protobuf==4.25.1
     # via
     #   google-api-core
     #   googleapis-common-protos
