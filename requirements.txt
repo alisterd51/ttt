@@ -465,7 +465,7 @@ xhtml2pdf==0.2.11
     # via blabla (pyproject.toml)
 xlrd==1.2.0
     # via wiremind-python
-yarl==1.9.2
+yarl==1.9.4
     # via aiohttp
 zipp==3.17.0
     # via importlib-metadata
