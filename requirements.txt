@@ -137,7 +137,7 @@ google-crc32c==1.5.0
     #   google-resumable-media
 google-resumable-media==2.6.0
     # via google-cloud-storage
-googleapis-common-protos==1.61.0
+googleapis-common-protos==1.62.0
     # via google-api-core
 graphql-core==3.2.3
     # via strawberry-graphql
