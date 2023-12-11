@@ -133,7 +133,7 @@ pydantic[email]==2.4.2
     #   pydantic
     #   pydantic-extra-types
     #   remoulade
-pydantic-core==2.10.1
+pydantic-core==2.14.5
     # via pydantic
 pydantic-extra-types==2.1.0
     # via blabla (pyproject.toml)
