@@ -41,7 +41,7 @@ attrs==23.1.0
     # via
     #   aiohttp
     #   remoulade
-babel==2.13.0
+babel==2.13.1
     # via wiremind-python
 bcrypt==4.0.1
     # via paramiko
