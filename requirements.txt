@@ -234,7 +234,7 @@ oscrypto==1.3.0
     # via pyhanko-certvalidator
 packaging==23.2
     # via marshmallow
-pamqp==2.3.0
+pamqp==3.2.1
     # via amqpstorm
 paramiko==2.12.0
     # via
