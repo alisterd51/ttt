@@ -25,7 +25,7 @@ asn1tools==0.166.0
     # via blabla (pyproject.toml)
 attrs==23.1.0
     # via remoulade
-bitstruct==8.17.0
+bitstruct==8.19.0
     # via asn1tools
 certifi==2023.7.22
     # via requests
