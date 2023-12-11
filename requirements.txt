@@ -335,7 +335,7 @@ qrcode==7.4.2
     # via
     #   blabla (pyproject.toml)
     #   pyhanko
-redis==4.6.0
+redis==5.0.1
     # via
     #   remoulade
     #   wiremind-python
