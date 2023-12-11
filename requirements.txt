@@ -103,7 +103,7 @@ elasticsearch[async]==7.17.9
     #   elasticsearch
     #   elasticsearch-dsl
     #   wiremind-python
-elasticsearch-dsl==7.4.1
+elasticsearch-dsl==8.11.0
     # via wiremind-python
 email-validator==2.0.0.post2
     # via pydantic
