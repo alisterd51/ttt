@@ -126,7 +126,7 @@ ptpython==3.0.23
     # via blabla (pyproject.toml)
 pycparser==2.21
     # via cffi
-pydantic[email]==2.4.2
+pydantic[email]==2.5.2
     # via
     #   blabla (pyproject.toml)
     #   fastapi
