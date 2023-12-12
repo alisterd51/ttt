@@ -135,7 +135,7 @@ pydantic[email]==2.4.2
     #   remoulade
 pydantic-core==2.10.1
     # via pydantic
-pydantic-extra-types==2.1.0
+pydantic-extra-types==2.2.0
     # via blabla (pyproject.toml)
 pygments==2.16.1
     # via ptpython
