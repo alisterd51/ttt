@@ -120,7 +120,7 @@ priority==2.0.0
     # via hypercorn
 prometheus-client==0.17.1
     # via remoulade
-prompt-toolkit==3.0.39
+prompt-toolkit==3.0.43
     # via ptpython
 ptpython==3.0.23
     # via blabla (pyproject.toml)
