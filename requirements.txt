@@ -122,7 +122,7 @@ prometheus-client==0.17.1
     # via remoulade
 prompt-toolkit==3.0.39
     # via ptpython
-ptpython==3.0.23
+ptpython==3.0.25
     # via blabla (pyproject.toml)
 pycparser==2.21
     # via cffi
