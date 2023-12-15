@@ -43,7 +43,7 @@ dev = [
     "pip-tools==7.3.0",
     "pre-commit",
     "ptpython",
-    "pyright==1.1.334",
+    "pyright==1.1.341",
     "pytest==7.4.3",
     "python-dotenv",
     "pytest-cov==4.1.0",
