@@ -139,7 +139,7 @@ pydantic-extra-types==2.1.0
     # via blabla (pyproject.toml)
 pygments==2.16.1
     # via ptpython
-pyhanko==0.20.1
+pyhanko==0.21.0
     # via xhtml2pdf
 pyhanko-certvalidator==0.24.1
     # via
