@@ -7,5 +7,54 @@
     "default:semanticCommits",
     ":disableRateLimiting",
     ":rebaseStalePrs"
+  ],
+  "packageRules": [
+    {
+      "description": "Disable all updates for python in dockerfile",
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "matchPackageNames": [
+        "python"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "enabled": false
+    },
+    {
+      "groupName": "python minor/patch dependencies",
+      "groupSlug": "python-minor-patch",
+      "matchCategories": [
+        "python"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ]
+    },
+    {
+      "groupName": "python minor/patch dependencies",
+      "groupSlug": "python-minor-patch",
+      "matchCategories": [
+        "python"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "matchCurrentVersion": "!/^0/"
+    },
+    {
+      "matchCategories": [
+        "python"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchDepNames": [
+        "kubernetes"
+      ],
+      "enabled": false
+    }
   ]
 }
