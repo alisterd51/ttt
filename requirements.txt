@@ -50,7 +50,7 @@ dnspython==2.4.2
     # via email-validator
 email-validator==2.0.0.post2
     # via pydantic
-fastapi==0.104.0
+fastapi==0.108.0
     # via blabla (pyproject.toml)
 greenlet==3.0.0
     # via sqlalchemy
