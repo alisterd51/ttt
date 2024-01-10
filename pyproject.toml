@@ -69,7 +69,7 @@ lint = [
     "colorama",
     "factory-boy",
     "freezegun",
-    "lxml-stubs==0.4.0",
+    "lxml-stubs==0.5.1",
     "notion-client",
     "pdfminer.six",
     "ptpython",
