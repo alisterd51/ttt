@@ -15,7 +15,6 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "(^|/)helmfile\\.ya?ml\\.gotmpl$",
         "\\.ya?ml$"
       ],
       "matchStrings": [
