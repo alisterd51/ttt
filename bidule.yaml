@@ -5,4 +5,4 @@ image:
   tag: v0.32.0 # renovate: datasource=docker depName=quay.io/thanos/thanos versioning=docker
 image2:
   repository: thanosio/thanos
-  tag: v0.32.0 # renovate: datasource=docker depName=thanosio/thanos versioning=docker
+  tag: v0.33.0 # renovate: datasource=docker depName=thanosio/thanos versioning=docker
