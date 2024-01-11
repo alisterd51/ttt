@@ -11,7 +11,7 @@
   "enabledManagers": [
     "custom.regex"
   ],
-  "packageRules": [
+  "customManagers": [
     {
       "customType": "regex",
       "fileMatch": [
