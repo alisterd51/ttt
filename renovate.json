@@ -18,7 +18,7 @@
         "\\.ya?ml$"
       ],
       "matchStrings": [
-        "tag: (?<currentValue>.*)(?@?<currentDigest>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n"
+        "tag: (?<currentValue>.*)@?(?<currentDigest>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n"
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-tags{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
