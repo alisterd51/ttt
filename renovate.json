@@ -8,53 +8,23 @@
     ":disableRateLimiting",
     ":rebaseStalePrs"
   ],
+  "enabledManagers": [
+    "custom.regex"
+  ],
   "packageRules": [
     {
-      "description": "Disable all updates for python in dockerfile",
-      "matchManagers": [
-        "dockerfile"
+      "customType": "regex",
+      "fileMatch": [
+        "(^|/)helmfile\\.ya?ml\\.gotmpl$",
+        "\\.ya?ml$"
       ],
-      "matchPackageNames": [
-        "python"
+      "matchStrings": [
+        ".*?_VERSION: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n",
+        "tag: (?<currentValue>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n",
+        "image: \"?(?<depName>.*?):(?<currentValue>.*\\d+?)\"? # renovate: datasource=(?<datasource>.*?)( versioning=(?<versioning>.*?))?\\n"
       ],
-      "matchUpdateTypes": [
-        "major",
-        "minor"
-      ],
-      "enabled": false
-    },
-    {
-      "groupName": "python minor/patch dependencies",
-      "groupSlug": "python-minor-patch",
-      "matchCategories": [
-        "python"
-      ],
-      "matchUpdateTypes": [
-        "patch"
-      ]
-    },
-    {
-      "groupName": "python minor/patch dependencies",
-      "groupSlug": "python-minor-patch",
-      "matchCategories": [
-        "python"
-      ],
-      "matchUpdateTypes": [
-        "minor"
-      ],
-      "matchCurrentVersion": "!/^0/"
-    },
-    {
-      "matchCategories": [
-        "python"
-      ],
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "matchDepNames": [
-        "kubernetes"
-      ],
-      "enabled": false
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-tags{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ]
 }
