@@ -13,7 +13,7 @@
   ],
   "helm-values": {
     "fileMatch": [
-      "^.*/values/base/.*\\.yaml$"
+      "^.*/values/.*\\.yaml$"
     ]
   }
 }
