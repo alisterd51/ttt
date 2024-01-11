@@ -9,19 +9,11 @@
     ":rebaseStalePrs"
   ],
   "enabledManagers": [
-    "custom.regex"
+    "helm-values"
   ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "\\.ya?ml$"
-      ],
-      "matchStrings": [
-        "tag: (?<currentVersion>.*) # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\n"
-      ],
-      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-tags{{/if}}",
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    }
-  ]
+  "helm-values": {
+    "fileMatch": [
+      "^(\/values\/).*.yaml$"
+    ]
+  }
 }

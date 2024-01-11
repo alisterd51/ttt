@@ -3,6 +3,7 @@ image:
   registry: quay.io
   repository: thanos/thanos
   tag: v0.32.0 # renovate: datasource=docker depName=quay.io/thanos/thanos versioning=docker
-image2:
-  repository: thanosio/thanos
-  tag: v0.32.0 # renovate: datasource=docker depName=thanosio/thanos versioning=docker
+coreImage:
+  registry: docker.io
+  repository: bitnami/harbor-core
+  tag: 2.1.3-debian-10-r38
