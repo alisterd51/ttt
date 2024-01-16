@@ -6,8 +6,7 @@
     "config:best-practices",
     "default:semanticCommits",
     ":disableRateLimiting",
-    ":rebaseStalePrs",
-    "group:all"
+    ":rebaseStalePrs"
   ],
   "enabledManagers": ["dockerfile", "npm"],
   "packageRules": [
@@ -49,6 +48,18 @@
       "matchManagers": ["npm"],
       "matchUpdateTypes": ["major"],
       "enabled": false
+    },
+    {
+      "groupName": "all npm dependencies",
+      "groupSlug": "all npm",
+      "matchManagers": ["npm"],
+      "matchPackagePatterns": ["*"]
+    },
+    {
+      "groupName": "all docker dependencies",
+      "groupSlug": "all docker",
+      "matchManagers": ["docker"],
+      "matchPackagePatterns": ["*"]
     }
   ]
 } 
