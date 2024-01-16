@@ -56,9 +56,9 @@
       "matchPackagePatterns": ["*"]
     },
     {
-      "groupName": "all docker dependencies",
-      "groupSlug": "all docker",
-      "matchManagers": ["docker"],
+      "groupName": "all dockerfile dependencies",
+      "groupSlug": "all dockerfile",
+      "matchManagers": ["dockerfile"],
       "matchPackagePatterns": ["*"]
     }
   ]
