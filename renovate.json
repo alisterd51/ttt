@@ -1,7 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "enabled": true,
-  "schedule": ["before 7am on monday"],
   "automergeSchedule": ["before 10am on tuesday"],
   "baseBranches": ["master"],
   "extends": [
