@@ -1,6 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "enabled": true,
+  "schedule": ["before 7am on monday"],
+  "automergeSchedule": ["before 10am on tuesday"],
   "baseBranches": ["master"],
   "extends": [
     "config:best-practices",
@@ -8,12 +10,59 @@
     ":disableRateLimiting",
     ":rebaseStalePrs"
   ],
-  "enabledManagers": [
-    "helm-values"
-  ],
-  "helm-values": {
-    "fileMatch": [
-      "^.*/values/.*\\.yaml$"
-    ]
-  }
-}
+  "enabledManagers": ["dockerfile", "npm"],
+  "packageRules": [
+    {
+      "description": "Automatically merge no major level updates for dockerfile",
+      "matchManagers": ["dockerfile"],
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "enabled": true
+    },
+    {
+      "description": "Disable major level updates for dockerfile",
+      "matchManagers": ["dockerfile"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "description": "Automatically merge patch level updates for npm",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "enabled": true
+    },
+    {
+      "description": "Automatically merge true minor level updates for npm",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "enabled": true
+    },
+    {
+      "description": "Disable false minor level updates for npm",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor"],
+      "matchCurrentVersion": "/^0/",
+      "enabled": false
+    },
+    {
+      "description": "Disable major level updates for npm",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "groupName": "npm dependencies",
+      "groupSlug": "npm",
+      "matchCategories": ["npm"]
+    },
+    {
+      "groupName": "docker dependencies",
+      "groupSlug": "docker",
+      "matchCategories": ["docker"]
+    }
+  ]
+} 
