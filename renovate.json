@@ -50,6 +50,13 @@
       "enabled": false
     },
     {
+      "description": "Disable minor typescript update for npm",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor"],
+      "matchPackageNames": ["typescript"],
+      "enabled": false
+    },
+    {
       "groupName": "all npm dependencies",
       "groupSlug": "all npm",
       "matchManagers": ["npm"],
