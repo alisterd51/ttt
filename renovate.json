@@ -1,13 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "enabled": true,
-  "automergeSchedule": ["before 10am on tuesday"],
   "baseBranches": ["master"],
   "extends": [
     "config:best-practices",
     "default:semanticCommits",
     ":disableRateLimiting",
-    ":rebaseStalePrs"
+    ":rebaseStalePrs",
+    "group:all"
   ],
   "enabledManagers": ["dockerfile", "npm"],
   "packageRules": [
@@ -49,16 +49,6 @@
       "matchManagers": ["npm"],
       "matchUpdateTypes": ["major"],
       "enabled": false
-    },
-    {
-      "groupName": "npm dependencies",
-      "groupSlug": "npm",
-      "matchCategories": ["npm"]
-    },
-    {
-      "groupName": "docker dependencies",
-      "groupSlug": "docker",
-      "matchCategories": ["docker"]
     }
   ]
 } 
