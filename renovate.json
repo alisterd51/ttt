@@ -14,7 +14,6 @@
       "description": "Automatically merge no major level updates for dockerfile",
       "matchManagers": ["dockerfile"],
       "matchUpdateTypes": ["minor", "patch", "digest"],
-      "matchCurrentVersion": "!/^0/",
       "automerge": true
     },
     {
@@ -33,7 +32,6 @@
       "description": "Automatically merge true minor level updates for npm",
       "matchManagers": ["npm"],
       "matchUpdateTypes": ["minor"],
-      "matchCurrentVersion": "!/^0/",
       "automerge": true
     },
     {
@@ -41,6 +39,13 @@
       "matchManagers": ["npm"],
       "matchUpdateTypes": ["major", "minor"],
       "matchPackageNames": ["typescript"],
+      "enabled": false
+    },
+    {
+      "description": "Disable minor zone.js update for npm",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["major", "minor"],
+      "matchPackageNames": ["zone.js"],
       "enabled": false
     },
     {
