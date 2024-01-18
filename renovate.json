@@ -15,8 +15,7 @@
       "matchManagers": ["dockerfile"],
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "matchCurrentVersion": "!/^0/",
-      "automerge": true,
-      "enabled": true
+      "automerge": true
     },
     {
       "description": "Disable major level updates for dockerfile",
@@ -28,39 +27,27 @@
       "description": "Automatically merge patch level updates for npm",
       "matchManagers": ["npm"],
       "matchUpdateTypes": ["patch"],
-      "enabled": true
+      "automerge": true
     },
     {
       "description": "Automatically merge true minor level updates for npm",
       "matchManagers": ["npm"],
       "matchUpdateTypes": ["minor"],
       "matchCurrentVersion": "!/^0/",
-      "enabled": true
-    },
-    {
-      "description": "Disable false minor level updates for npm",
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": ["minor"],
-      "matchCurrentVersion": "/^0/",
-      "enabled": false
-    },
-    {
-      "description": "Disable major level updates for npm",
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
+      "automerge": true
     },
     {
       "description": "Disable minor typescript update for npm",
       "matchManagers": ["npm"],
-      "matchUpdateTypes": ["minor"],
+      "matchUpdateTypes": ["major", "minor"],
       "matchPackageNames": ["typescript"],
       "enabled": false
     },
     {
-      "groupName": "all npm dependencies",
-      "groupSlug": "all npm",
+      "groupName": "minor patch npm dependencies",
+      "groupSlug": "minor patch npm",
       "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"],
       "matchPackagePatterns": ["*"]
     },
     {
