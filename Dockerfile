@@ -1,5 +1,5 @@
 # Base image for build
-FROM node:20.0.0@sha256:0052410af98158173b17a26e0e2a46a3932095ac9a0ded660439a8ffae65b1e3 AS build
+FROM node:20.11.0@sha256:fd0115473b293460df5b217ea73ff216928f2b0bb7650c5e7aa56aae4c028426 AS build
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build --omit=dev
 
 # Base image for production
-FROM nginx:1.25.3-alpine3.18-slim@sha256:d45f4c998198583de669cd0ea8ab819ab344d57d6bf42b6f121d0ec097a032e8 AS production
+FROM nginx:1.25.3-alpine3.18-slim@sha256:4b4bc9f88bd63fb3abc8fd4f5ad7f16554589ca1fca8d3a53416ff55b59b6f80 AS production
 
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/blog-angular.conf
