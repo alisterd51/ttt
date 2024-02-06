@@ -1,26 +1,11 @@
-# Base image for build
-FROM node:20.0.0@sha256:0052410af98158173b17a26e0e2a46a3932095ac9a0ded660439a8ffae65b1e3 AS build
+FROM debian:12.4
 
-# Create app directory
-WORKDIR /usr/src/app
+RUN apt update && apt install -y curl tar xz-utils
 
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-COPY package*.json ./
+ENV ZIGVER=0.11.0
 
-# Install app dependencies
-RUN npm ci
+RUN curl https://ziglang.org/download/$ZIGVER/zig-linux-$(uname -m)-$ZIGVER.tar.xz -O && \
+    tar xf zig-linux-$(uname -m)-$ZIGVER.tar.xz && \
+    mv zig-linux-$(uname -m)-$ZIGVER/* /usr/local/bin/.
 
-# Bundle app source
-COPY . .
-
-# Creates a "dist" folder with the production build
-RUN npm run build --omit=dev
-
-# Base image for production
-FROM nginx:1.25.3-alpine3.18-slim@sha256:d45f4c998198583de669cd0ea8ab819ab344d57d6bf42b6f121d0ec097a032e8 AS production
-
-# Copy nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/blog-angular.conf
-
-# Copy a "dist" folder for the production build
-COPY --from=build /usr/src/app/dist/blog-angular /usr/share/nginx/html
+WORKDIR /app

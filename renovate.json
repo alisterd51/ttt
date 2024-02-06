@@ -1,65 +1,34 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "enabled": true,
-  "baseBranches": ["master"],
+  "baseBranches": ["main"],
   "extends": [
     "config:best-practices",
-    "default:semanticCommits",
-    ":disableRateLimiting",
-    ":rebaseStalePrs"
+    "default:semanticCommits"
   ],
-  "enabledManagers": ["dockerfile", "npm"],
+  "separateMinorPatch": true,
+  "enabledManagers": ["dockerfile", "github-actions", "custom.regex"],
   "packageRules": [
     {
-      "description": "Automatically merge no major level updates for dockerfile",
-      "matchManagers": ["dockerfile"],
-      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "description": "Automatically merge minor and patch level updates",
+      "matchUpdateTypes": ["patch", "pin", "pinDigest", "digest"],
       "automerge": true
     },
     {
-      "description": "Disable major level updates for dockerfile",
-      "matchManagers": ["dockerfile"],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
-    },
-    {
-      "description": "Automatically merge patch level updates for npm",
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": ["patch"],
-      "automerge": true
-    },
-    {
-      "description": "Automatically merge true minor level updates for npm",
-      "matchManagers": ["npm"],
+      "description": "Automatically merge minor and patch level updates",
       "matchUpdateTypes": ["minor"],
+      "matchCurrentVersion": "!/^0/",
       "automerge": true
-    },
+    }
+  ],
+  "customManagers": [
     {
-      "description": "Disable minor typescript update for npm",
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": ["major", "minor"],
-      "matchPackageNames": ["typescript"],
-      "enabled": false
-    },
-    {
-      "description": "Disable minor zone.js update for npm",
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": ["major", "minor"],
-      "matchPackageNames": ["zone.js"],
-      "enabled": false
-    },
-    {
-      "groupName": "minor patch npm dependencies",
-      "groupSlug": "minor patch npm",
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchPackagePatterns": ["*"]
-    },
-    {
-      "groupName": "all dockerfile dependencies",
-      "groupSlug": "all dockerfile",
-      "matchManagers": ["dockerfile"],
-      "matchPackagePatterns": ["*"]
+      "description": "Update zig version",
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["\\ENV ZIGVER=(?<currentValue>.*?)\\s"],
+      "datasourceTemplate": "npm",
+      "depNameTemplate": "semantic-release"
     }
   ]
-} 
+}
