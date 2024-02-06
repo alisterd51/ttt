@@ -23,12 +23,11 @@
   ],
   "customManagers": [
     {
-      "description": "Update zig version",
       "customType": "regex",
       "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["\\ENV ZIGVER=(?<currentValue>.*?)\\s"],
-      "datasourceTemplate": "npm",
-      "depNameTemplate": "semantic-release"
+      "matchStrings": ["ENV ZIGVER=(?<currentValue>.*?)\\n"],
+      "depNameTemplate": "ziglang/zig",
+      "datasourceTemplate": "github-releases"
     }
   ]
 }
